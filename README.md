@@ -1,3 +1,7 @@
+# NEVERMIND
+Just saw Twitter(x) pricing, LMAO
+So, am not continuing this for now.
+
 ## WATCHTWEET(x)
 
 Is a simple bot that watch a tweet and give you notifications
