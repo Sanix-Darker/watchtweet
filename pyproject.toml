@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "watchtweet"
+version = "0.1.0"
+description = "Watch a tweet and get same notifications as the original author of it."
+authors = ["sanix-darker <s4nixd@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+tweepy = {extras = ["async"], version = "^4.14.0"}
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.290"
+pytest = "^7.4.2"
+black = "^23.9.1"
+pytest-mock = "^3.11.1"
+mypy = "^1.5.1"
+types-oauthlib = "^3.2.0.9"
+types-requests = "^2.31.0.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.mypy.overrides]]
+# this is for ignoring errors related to stubs missing for tweepy
+module = "tweepy.client.*,tweepy.errors.*"
+ignore_missing_imports = true
